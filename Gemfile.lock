@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: dfb0762fffe7cd5ba80a6de726e063b2bf6e6240
+  specs:
+    faker (1.8.4)
+      i18n (~> 0.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,10 +51,9 @@ GEM
     autoprefixer-rails (7.1.4.1)
       execjs
     bindex (0.5.0)
-    bootstrap (4.0.0.beta)
-      autoprefixer-rails (>= 6.0.3)
-      popper_js (~> 1.11.1)
-      sass (>= 3.4.19)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.1)
@@ -71,6 +77,8 @@ GEM
     erubi (1.6.1)
     execjs (2.7.0)
     ffi (1.9.18-x86-mingw32)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
@@ -97,7 +105,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.1-x86-mingw32)
       mini_portile2 (~> 2.3.0)
-    popper_js (1.11.1)
+    pg (0.21.0-x86-mingw32)
     public_suffix (3.0.0)
     puma (3.10.0)
     rack (2.0.3)
@@ -180,12 +188,15 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.beta)
+  bootstrap-sass (~> 3.3.6)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  faker!
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
+  pg (~> 0.21.0)
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
@@ -197,4 +208,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0.pre.2

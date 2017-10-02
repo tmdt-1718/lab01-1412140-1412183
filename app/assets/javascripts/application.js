@@ -12,7 +12,38 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
 //= require jquery3
-//= require popper
+//= require jquery_ujs
+//= require jquery
 //= require bootstrap-sprockets
+// $(document).ready(()=> {
+    
+    
+// });
+// function openSlideMenu(){
+//     // $('#left-nav').css({
+//     //     width: '0%',
+//     //     display: 'none'
+//     // });
+//     $('#left-nav').hide();
+//     $('#content').css({
+//         width: '100%'
+//     });
+// }
+
+function toggleSlideMenu() {
+    var leftnav = document.getElementById('left-nav'),
+        content = document.getElementById('content');
+        if(leftnav.style.width > '0px') {
+            leftnav.style.width = '0%';
+            content.style.width = '100%';
+            console.log("SHOW");
+        }
+        else {
+            leftnav.style.width = '20%';
+            leftnav.style.cssFloat  = 'left';
+            content.style.width = '80%';
+            content.style.cssFloat  = 'left';  
+            console.log("HIDE");
+        }
+}

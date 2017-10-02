@@ -30,8 +30,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # require package here
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
+gem "font-awesome-rails"
+gem 'pg', '~> 0.21.0'
+#gem 'faker','>= 1.8.4'
+gem 'faker', github: 'stympy/faker'
 # end require package here
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

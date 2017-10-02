@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# require 'faker'
+20.times do
+	User.create([{
+		firstname: Faker::Name.first_name,
+		lastname: Faker::Name.last_name,
+		username: Faker::Name.unique.name,
+		email: Faker::Internet.email
+		}])
+end
+
+#User.all.map(&:destroy)

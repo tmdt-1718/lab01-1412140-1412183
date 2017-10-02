@@ -1,1 +1,127 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+body {
+    padding-top: 50px;
+}
+
+.navbar,
+.dropdown-menu {
+    background: #C62828;
+    border: none;
+}
+
+.nav>li>a,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a,
+.dropdown-menu>li {
+    border-bottom: 3px solid transparent;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover,
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    border-bottom: 3px solid transparent;
+    background: rgba(154, 154, 154, 0.27);
+}
+
+.navbar a,
+.dropdown-menu>li>a,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover,
+.navbar-toggle {
+    color: #fff;
+}
+
+.dropdown-menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.nav li:hover,
+.nav li.active {
+    border-bottom: #EF9A9A 4px solid;
+}
+
+.navbar-toggle .icon-bar {
+    color: #fff;
+    background: #000000;
+}
+
+
+/*left nav*/
+
+#left-nav {
+    // width: 20%;
+    background: #03A9F4;
+    height: auto;
+}
+
+#left-nav ul {
+    list-style: none;
+    transition: 0.5s;
+    min-height: 400px;
+    font-size: 22px;
+}
+
+
+/* main content*/
+
+#content {
+    // float:left;
+    box-sizing: border-box;
+    font-size: 22px;
+    padding: 20px 40px;
+    // width: 80%;
+    background: #263238;
+    color: #fff;
+    transition: margin-left 0.5s;
+}
+
+
+/* footer */
+
+footer {
+    clear: both;
+}
+
+// hide left nav when screen gone small
+@media screen and (max-width: 677px) {
+    #left-nav {
+        //display: none;
+        width: 0px;
+    }
+    .open-slide {
+        display: block;
+    }
+    #content {
+        width: 100%;
+    }
+}
+
+// show left nav when screen enough big
+@media screen and (min-width: 678px) {
+    #left-nav {
+        width: 20%;
+        float: left;
+    }
+    .open-slide {
+        display: none;
+    }
+    #content {
+        width: 80%;
+        float: left;
+    }
+}
+
+
+/*
+
+footer
+
+*/
