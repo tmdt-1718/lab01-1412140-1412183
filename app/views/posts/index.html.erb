@@ -1,7 +1,7 @@
 <div class="container">
 
-    <% if @post.count ==0 %>
-        <h1>There are no posts currently in this category</h1>
+    <% if @post.count == 0 %>
+        <h1>There are currently no posts</h1>
         <% else %>
             <div class="row">
                 <% @post.each do |post| %>
