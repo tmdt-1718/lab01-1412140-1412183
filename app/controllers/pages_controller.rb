@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def blog
   end
+
+  def user
+  end
 end

@@ -8,15 +8,6 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar'%>
-    <nav class="breadcrumb">
-        <a class="breadcrumb-item" href="#">Home</a>
-        <a class="breadcrumb-item" href="#">Library</a>
-        <a class="breadcrumb-item" href="#">Data</a>
-        <span class="breadcrumb-item active">Bootstrap</span>
-      </nav>
-    <%= render 'shared/leftsidebar'%>
-    <%= render 'shared/content'%>
-    <%= render 'shared/footer' %>
+    <%= yield %>
   </body>
 </html>

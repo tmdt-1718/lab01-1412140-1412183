@@ -30,12 +30,17 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # require package here
+gem 'paperclip', '~> 5.1'
+gem 'simple_form', '~> 3.5'
+gem 'devise', '~> 4.3'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'pg', '~> 0.21.0'
 #gem 'faker','>= 1.8.4'
 gem 'faker', github: 'stympy/faker'
+
 # end require package here
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
