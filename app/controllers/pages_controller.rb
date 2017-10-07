@@ -1,16 +1,3 @@
 class PagesController < ApplicationController
-  def home
-  end
-
-  def about
-  end
-
-  def album
-  end
-
-  def blog
-  end
-
-  def user
-  end
+  resouces: posts
 end

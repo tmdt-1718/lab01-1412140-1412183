@@ -17,8 +17,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 // $(document).ready(()=> {
-    
-    
+
+
 // });
 // function openSlideMenu(){
 //     // $('#left-nav').css({
@@ -34,16 +34,15 @@
 function toggleSlideMenu() {
     var leftnav = document.getElementById('left-nav'),
         content = document.getElementById('content');
-        if(leftnav.style.width > '0px') {
-            leftnav.style.width = '0%';
-            content.style.width = '100%';
-            console.log("SHOW");
-        }
-        else {
-            leftnav.style.width = '20%';
-            leftnav.style.cssFloat  = 'left';
-            content.style.width = '80%';
-            content.style.cssFloat  = 'left';  
-            console.log("HIDE");
-        }
+    if (leftnav.style.width > '0px') {
+        leftnav.style.width = '0%';
+        content.style.width = '100%';
+        console.log("SHOW");
+    } else {
+        leftnav.style.width = '20%';
+        leftnav.style.cssFloat = 'left';
+        content.style.width = '80%';
+        content.style.cssFloat = 'left';
+        console.log("HIDE");
+    }
 }

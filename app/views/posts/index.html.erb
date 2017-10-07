@@ -1,0 +1,17 @@
+<div class="container">
+
+    <% if @post.count ==0 %>
+        <h1>There are no posts currently in this category</h1>
+        <% else %>
+            <div class="row">
+                <% @post.each do |post| %>
+                    <!-- <h2>
+                        <%= link_to post.title , post_path(post) %>
+                    </h2> -->
+                    <div class="col-md-3">
+                        <%= post.body %>
+                    </div>
+                    <% end %>
+            </div>
+            <% end %>
+</div>
