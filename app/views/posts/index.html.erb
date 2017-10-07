@@ -1,13 +1,25 @@
 <div class="container">
-
+    <div class="row">
+            <div class="col-lg-12">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Want to create a new</h3>
+                            <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+                        </div>
+                        <div class="panel-body">
+                                <%= button_to("Create Post", new_post_path, method: :get, :class => "btn btn-default") %>
+                        </div>
+                    </div>
+                </div>
+    </div>
     <% if @post.count == 0 %>
         <h1>There are currently no posts</h1>
         <% else %>
             <div class="row">
                 <% @post.each do |post| %>
-                    <!-- <h2>
-                        <%= link_to post.title , post_path(post) %>
-                    </h2> -->
+                    <h2>
+                         <%= link_to post.title, post_path(post) %>
+                    </h2>
                     <div class="col-md-3">
                         <%= post.body %>
                     </div>

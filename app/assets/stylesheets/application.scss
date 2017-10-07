@@ -1,10 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-body {
-    padding-top: 50px;
+// body {
+//     padding-top: 50px;
+// }
+.panel-body {
+    display: none;
+}
+.clickable{
+    cursor: pointer;   
 }
 
+.panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}
+.navbar .nav > li.dropdown.open.active > a:hover, 
+.navbar .nav > li.dropdown.open > a
+{
+   color: #fff;
+   background-color: #b91773;
+   border-color: #fff;
+}
 .navbar,
 .dropdown-menu {
     background: #C62828;
@@ -118,7 +135,6 @@ footer {
         float: left;
     }
 }
-
 
 /*
 

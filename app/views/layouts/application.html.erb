@@ -13,51 +13,26 @@
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
-                <%= link_to "Book Review", root_path, class: "navbar-brand" %>
+                <%= link_to "HOME", root_path, class: "navbar-brand" %>
             </div>
             <ul class="nav navbar-nav">
                 <li>
-                    <%= link_to "Sign-Up", new_user_registration_path %>
+                    <%= link_to "Sign-Up", "Register" %>
                 </li>
-                <% if user_signed_in? %>
-                    <li>
-                        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-                    </li>
-                    <% else %>
-                        <li>
-                            <%= link_to "Log In", new_user_session_path %>
-                        </li>
-                        <% end %>
-                            <li></li>
-                            <li></li>
             </ul>
             <ul class="nav navbar-nav pull-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li>Fiction</li>
-                        <li>Technology</li>
-                        <% Category.all.each do |category| %>
-                            <li>
-                                <%= link_to category.name, books_path(category: category.name), class: "link" %>
-                            </li>
-                            <% end %>
+                        <li>test1</li>
+                        <li>test2</li>
+                        <li>test3</li>
+                        <li>test5</li>
                     </ul>
                 </li>
-                <% if user_signed_in? %>
-                    <li>
-                        <%= link_to "Add Book", new_book_path %>
-                    </li>
-                    <% end %>
             </ul>
         </div>
     </nav>
-    <p class="notice">
-        <%= notice %>
-    </p>
-    <p class="alert">
-        <%= alert %>
-    </p>
     <div class="container">
         <%= yield %>
     </div>
