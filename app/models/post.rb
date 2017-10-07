@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-    belongs_to :category_post
+    belongs_to :CategoryPost
 end

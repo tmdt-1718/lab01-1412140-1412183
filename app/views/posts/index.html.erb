@@ -12,11 +12,11 @@
                     </div>
                 </div>
     </div>
-    <% if @post.count == 0 %>
+    <% if @posts.count == 0 %>
         <h1>There are currently no posts</h1>
         <% else %>
             <div class="row">
-                <% @post.each do |post| %>
+                <% @posts.each do |post| %>
                     <h2>
                          <%= link_to post.title, post_path(post) %>
                     </h2>

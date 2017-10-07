@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
 
   before_action :find_Post, only: [:show, :edit, :update, :destroy]
-  
+  before_action :set_categories, only: [:new,:create, :edit]
+  private
+
   def index
-      @post = Post.all.order("created_at DESC")
+    @posts = Post.all
   end
 
   def show
@@ -31,6 +33,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.category_id = params[:category_id]
     if @post.save
       redirect_to root_path
     else
@@ -44,4 +47,7 @@ class PostsController < ApplicationController
     def find_Post
       @post = Post.find(params[:id])
     end
+    def set_categories
+      @categories = CategoryPost.all.map{|c| [c.name, c.id]}
+      end
 end
