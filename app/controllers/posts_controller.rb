@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   private
 
   def index
-    @posts = Post.all
+    @post = Post.all.order("created_at DESC")
   end
 
   def show
