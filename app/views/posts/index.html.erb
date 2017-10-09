@@ -14,18 +14,21 @@
                 </div>
     </div>
     <% end %>
+    <h1 class="current-category">
+            <%= params[:category] %>
+        </h1>
     <% if @post.count == 0 %>
         <h1>There are currently no posts</h1>
         <% else %>
             <div class="row">
                 <% @post.each do |post| %>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                         <div class="panel panel-success">
                                 <div class="panel-heading">
                                     <h3 class="panel-title"><%= link_to post.title, post_path(post) %></h3>
                                 </div>
                                 <div class="panel-body">
-                                        <%= truncate(post.body,length:40,separator: ' ') %>
+                                        <%= truncate(post.body,length:100,separator: ' ') %>
                                 </div>
                         </div>
                 </div>
