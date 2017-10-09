@@ -1,17 +1,21 @@
 class PostsController < ApplicationController
-
-  before_action :find_Post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :set_categories, only: [:new,:create, :edit]
-  private
-
   def index
-    @post = Post.all.order("created_at DESC")
- end
+    if params[:category].blank?
+      @post = Post.all.order("created_at DESC")
+    else
+      @category_id = Category.find_by(name: params[:category]).id
+      @post = Post.where(:category_id => @category_id).order("created_at DESC")
+    end
+  end
 
   def show
+    # @post = post.find(params[:id])
   end
 
   def edit
+    @categories = Category.all.map{|c| [c.name, c.id]}
   end
 
   def update
@@ -29,10 +33,11 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @categories = Category.all.map{|c| [c.name, c.id]}
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.create(post_params)
     @post.category_id = params[:category_id]
     if @post.save
       redirect_to root_path
@@ -40,14 +45,17 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
+  # def shorten(string, count)
+  #   string.match(/^.{0,#{count}}\b/)[0]
+  # end
   private
+    def set_categories
+      @categories = Category.all.map{ |c| [c.name, c.id]} 
+    end
     def post_params
       params.require(:post).permit(:title, :body)
     end
-    def find_Post
+    def find_post
       @post = Post.find(params[:id])
     end
-    def set_categories
-      @categories = Category.all.map{|c| [c.name, c.id]}
-      end
 end
