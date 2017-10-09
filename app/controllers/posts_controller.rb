@@ -32,12 +32,13 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    # @post = Post.new
+    @post = current_user.posts.build
     @categories = Category.all.map{|c| [c.name, c.id]}
   end
 
   def create
-    @post = Post.create(post_params)
+    @post =current_user.posts.build(post_params)
     @post.category_id = params[:category_id]
     if @post.save
       redirect_to root_path
