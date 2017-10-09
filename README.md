@@ -6,7 +6,7 @@ Thành viên:
 * [X] **1412140** Nguyễn Thị Thu Hà (1412140)
 * [X] **1412183** Phạm Quốc Hoàng (1412183)
 
-URL: **URL hosting của bài tập**
+URL: **URL hosting**
 
 ## Yêu cầu
 
