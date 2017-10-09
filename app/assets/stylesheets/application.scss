@@ -4,7 +4,10 @@
 // body {
 //     padding-top: 50px;
 // }
+.navbar li {
+    box-sizing: border-box;
 
+}
 #createPost {
     display: none;
 }

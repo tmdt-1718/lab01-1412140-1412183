@@ -2,7 +2,6 @@
     <h1>Edit POST</h1>
     <%= simple_form_for @post, :url => {:controller => "posts", :action => "update"},:html => {:multipart => true } do |f| %>
         <%= f.select :category_id, @categories,:class => "form-control" %>
-        <%= f.file_field :post_img %>
         <%= f.input :title, label: "post Title" %>
          <%= f.input :body %>
          <%= f.button :submit %>
