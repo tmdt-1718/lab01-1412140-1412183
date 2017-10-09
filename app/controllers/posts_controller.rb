@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.all.order("created_at DESC")
-  end
+ end
 
   def show
   end
@@ -48,6 +48,6 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
     def set_categories
-      @categories = CategoryPost.all.map{|c| [c.name, c.id]}
+      @categories = Category.all.map{|c| [c.name, c.id]}
       end
 end
