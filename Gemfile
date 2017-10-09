@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # require package here
-gem 'paperclip', '~> 5.1'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.3'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'

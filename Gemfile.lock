@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 38166cf0a0e663a97d64b54fddcf0dee77c7882f
+  specs:
+    paperclip (5.1.0)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
+
+GIT
   remote: https://github.com/codahale/bcrypt-ruby.git
   revision: f2db689ba567d1a018f4dacb1ccf909adc93e887
   specs:
@@ -122,12 +133,6 @@ GEM
     nokogiri (1.8.1-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
-    paperclip (5.1.0)
-      activemodel (>= 4.2.0)
-      activesupport (>= 4.2.0)
-      cocaine (~> 0.5.5)
-      mime-types
-      mimemagic (~> 0.3.0)
     pg (0.21.0-x86-mingw32)
     public_suffix (3.0.0)
     puma (3.10.0)
@@ -229,7 +234,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
-  paperclip (~> 5.1)
+  paperclip!
   pg (~> 0.21.0)
   puma (~> 3.7)
   rails (~> 5.1.4)

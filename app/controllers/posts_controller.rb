@@ -40,6 +40,7 @@ class PostsController < ApplicationController
   def create
     @post =current_user.posts.build(post_params)
     @post.category_id = params[:category_id]
+    @post.post_img = params[:post_img]
     if @post.save
       redirect_to root_path
     else

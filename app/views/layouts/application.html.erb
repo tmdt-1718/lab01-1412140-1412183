@@ -42,14 +42,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="alert alert-warning alert-dismissable">
+                <% if notice %>
+                <div class="alert alert-success alert-dismissable">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <p class="notice"><%= notice %></p>
                 </div>
+                <% end %>
+                <% if alert %>
                 <div class="alert alert-danger alert-dismissable">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <p class="alert"><%= alert %></p>
-                    </div>
+                </div>
+                <% end %>
             </div>
         </div>
        
