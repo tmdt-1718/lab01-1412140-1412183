@@ -33,6 +33,7 @@ class PostsController < ApplicationController
 
   def new
     # @post = Post.new
+    uploader = ImageUploader.new
     @post = current_user.posts.build
     @categories = Category.all.map{|c| [c.name, c.id]}
   end
@@ -51,7 +52,7 @@ class PostsController < ApplicationController
       @categories = Category.all.map{ |c| [c.name, c.id]} 
     end
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :image)
     end
     def find_post
       @post = Post.find(params[:id])
