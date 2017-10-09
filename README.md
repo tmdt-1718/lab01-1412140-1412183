@@ -26,9 +26,9 @@ Yêu cầu **bắt buộc**
 * [ ] Vào trang blog sẽ thấy danh sách các bài viết, mỗi bài viết bao gồm: nội dung rút gọn, ảnh đại diện, người đăng và số view. (**MSSV**)
 * [ ] Nhấn vào mỗi bài viết sẽ thấy chi tiết bài viết cùng đầy đủ nội dung của bài viết. (**MSSV**)
 * [ ] Cho phép người dùng biết họ đang ở trang nào (sử dụng breadcrumb, highlight navigation bar,...). (**MSSV**)
-* [ ] Cho phép người dùng đăng nhập, đăng xuất, đăng ký thông tin tài khoản. (**MSSV**)
-* [ ] Cho phép người dùng đã đăng nhập đăng thêm bài viết mới. (**MSSV**)
-* [ ] Sử dụng bcrypt hoặc devise để quản lý thông tin người dùng và băm mật khẩu. (**MSSV**)
+* [X] Cho phép người dùng đăng nhập, đăng xuất, đăng ký thông tin tài khoản. (**1412183**)
+* [X] Cho phép người dùng đã đăng nhập đăng thêm bài viết mới. (**1412183**)
+* [X] Sử dụng bcrypt hoặc devise để quản lý thông tin người dùng và băm mật khẩu. (**1412183**)
 
 Yêu cầu **không bắt buộc**:
 * [ ] Có thể xem danh sách các comment của từng bài viết.  (**MSSV**)
@@ -37,7 +37,7 @@ Yêu cầu **không bắt buộc**:
 * [ ] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**MSSV**)
 * [ ] Cho phép người dùng tạo album và đăng ảnh mới vào album. (**MSSV**)
 * [ ] Chỉ cho phép người tạo album được phép thêm, xóa ảnh mình đã đăng vào album. (**MSSV**)
-* [ ] Chỉ cho phép người tạo bài viết được phép chỉnh sửa bài viết mình đã đăng. (**MSSV**)
+* [X] Chỉ cho phép người tạo bài viết được phép chỉnh sửa bài viết mình đã đăng. (**1412183**)
 * [ ] Cho phép người dùng layout bài viết bằng markdown. (**MSSV**)
 * [ ] Gửi mail cho người dùng khi người dùng đã đăng nhập thành công. (**MSSV**)
 * [ ] Gửi mail cho tác giả khi có người dùng comment vào bài viết của họ. (**MSSV**)
