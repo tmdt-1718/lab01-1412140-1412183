@@ -45,9 +45,6 @@ class PostsController < ApplicationController
       render 'new'
     end
   end
-  # def shorten(string, count)
-  #   string.match(/^.{0,#{count}}\b/)[0]
-  # end
   private
     def set_categories
       @categories = Category.all.map{ |c| [c.name, c.id]} 
