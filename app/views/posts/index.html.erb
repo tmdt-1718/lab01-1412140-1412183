@@ -6,7 +6,7 @@
                             <h3 class="panel-title">Want to create a new</h3>
                             <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body" id="createPost">
                                 <%= button_to("Create Post", new_post_path, method: :get, :class => "btn btn-default") %>
                         </div>
                     </div>
@@ -17,13 +17,17 @@
         <% else %>
             <div class="row">
                 <% @post.each do |post| %>
-                    <h2>
-                         <%= link_to post.title, post_path(post) %>
-                    </h2>
-                    <div class="col-md-3">
-                        <%= post.body %>
-                    </div>
-                    <% end %>
+                <div class="col-lg-4">
+                        <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><%= link_to post.title, post_path(post) %></h3>
+                                </div>
+                                <div class="panel-body">
+                                        <%= truncate(post.body,length:40,separator: ' ') %>
+                                </div>
+                        </div>
+                </div>
+                           <% end %>
             </div>
             <% end %>
 </div>
