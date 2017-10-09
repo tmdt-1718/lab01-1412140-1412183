@@ -28,11 +28,12 @@
                                     <h3 class="panel-title"><%= link_to post.title, post_path(post) %></h3>
                                 </div>
                                 <div class="panel-body">
+                                        <%= image_tag post.post_img.url(:post_index) %>
                                         <%= truncate(post.body,length:100,separator: ' ') %>
                                 </div>
                         </div>
                 </div>
-                           <% end %>
+                <% end %>
             </div>
             <% end %>
 </div>

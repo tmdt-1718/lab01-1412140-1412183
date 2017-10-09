@@ -10,7 +10,7 @@ Rails.application.configure do
   config.eager_load = false
 
   #paperClip config
-  Paperclip.options[:command_path] = "/c/Windows/system32/convert"
+  Paperclip.options[:command_path] = "/c/Windows/system32/"
   # Show full error reports.
   config.consider_all_requests_local = true
 
